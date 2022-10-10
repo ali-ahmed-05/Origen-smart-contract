@@ -46,13 +46,27 @@ describe("Origen",  function ()  {
     await nFT.setTokenAddress(token.address)
     
     //Vesting_founder
+    
+    //step 1
+
+    //admin
+    await nFT.createPackage("minipackage/" , 10); // 1
+    //package = 1
+
+
+    await nFT.createPackage("Superpackage/", 10); // 2
+    await nFT.createPackage("Ultimatepackage/", 10); // 3
+
+    let data = await nFT.package(1)
+    console.log(data)
+    
+    //user call
+
     await token.approve(nFT.address , '100000000000000000000000000000000000000000')
-
-    await nFT.createPackage("minipackage/" , 10);
-    await nFT.createPackage("Superpackage/", 10);
-    await nFT.createPackage("Ultimatepackage/", 10);
-
+    
     await nFT.createToken(1);
+  
+
     await nFT.createToken(2);
     await nFT.createToken(3);
     await nFT.createToken(1);
@@ -65,6 +79,10 @@ describe("Origen",  function ()  {
     console.log("URI" , (await nFT.tokenURI(5)))
 
     await nFT.disablePackage(1);
+
+    data = await nFT.package(1)
+    console.log(data)
+    
 
     await nFT.enablePackage(1);
 
