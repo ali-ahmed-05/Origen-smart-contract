@@ -72,6 +72,8 @@ describe("Origen",  function ()  {
     await nFT.createToken(1);
     await nFT.createToken(3);
 
+    console.log((await nFT.lastPackageid()).toString())
+
     console.log("URI" , (await nFT.tokenURI(1)))
     console.log("URI" , (await nFT.tokenURI(2)))
     console.log("URI" , (await nFT.tokenURI(3)))

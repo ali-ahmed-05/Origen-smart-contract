@@ -74,6 +74,10 @@ contract NFT is ERC721Enumerable , Ownable {
         return _id;
     }
 
+    function lastPackageid() public view  returns (uint256) {
+        return _packageIds.current();
+    }
+
     function createToken(uint256 ID) mint_mod(ID , true) public payable returns (uint) {
         IERC20(token).transferFrom(_msgSender() , address(this) , package[ID].price);
         uint256 _id = getTokenId();
