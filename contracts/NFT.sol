@@ -15,7 +15,7 @@ contract NFT is ERC721Enumerable , Ownable {
     using Strings for uint256;
 
     Counters.Counter private _tokenIds;
-    Counters.Counter private _packageIds; // 1 - 17
+    Counters.Counter public _packageIds; // 1 - 17
 
     struct Package{
         uint256 price;
