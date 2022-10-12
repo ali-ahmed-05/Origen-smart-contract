@@ -41,7 +41,21 @@ async function main() {
   token =await Token.deploy()
   await token.deployed()
 
-  await nFT.setTokenAddress(token.address)
+  let tx  = await nFT.setTokenAddress(token.address)
+  await tx.wait()
+
+  tx = await nFT.createPackage("minipackage/" , 10); // 1
+  await tx.wait()
+
+  
+  tx = await token.approve(nFT.address , 10)
+  await tx.wait()
+
+
+  tx = await nFT.createToken(1);
+  await tx.wait()
+
+  
 
   console.log("NFT" , nFT.address)
   console.log("Gcoin" , token.address)

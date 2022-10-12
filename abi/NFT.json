@@ -6,6 +6,7 @@
   "event Transfer(address indexed,address indexed,uint256 indexed)",
   "function _packageIds() view returns (uint256)",
   "function addOwner(address)",
+  "function airDrop(uint256,address) returns (uint256)",
   "function approve(address,uint256)",
   "function balanceOf(address) view returns (uint256)",
   "function baseURI() view returns (string)",

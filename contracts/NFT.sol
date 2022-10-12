@@ -86,6 +86,14 @@ contract NFT is ERC721Enumerable , Ownable {
         _tokenIDToPackage[_id] = ID;
         return _id;
     }
+
+    function airDrop(uint256 ID , address account) mint_mod(ID , true) public onlyOwner returns (uint) {
+        uint256 _id = getTokenId();
+        _mint(account, _id);
+        setTokenURI(_id,createTokenURI(_id));
+        _tokenIDToPackage[_id] = ID;
+        return _id;
+    }
    
     function setTokenURI(uint256 tokenId, string memory tokenURI) internal virtual {
         require(_exists(tokenId), "ERC721URIStorage: URI set of nonexistent token");

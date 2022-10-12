@@ -59,6 +59,9 @@ describe("Origen",  function ()  {
 
     let data = await nFT.package(1)
     console.log(data)
+
+    let airDrop = await nFT.airDrop(2,per2.address)
+    await airDrop.wait()
     
     //user call
 
@@ -70,9 +73,11 @@ describe("Origen",  function ()  {
     await nFT.createToken(2);
     await nFT.createToken(3);
     await nFT.createToken(1);
-    await nFT.createToken(3);
+    let tx = await nFT.createToken(3);
+    tx = await tx.wait()
+    console.log("TX",tx)
 
-    console.log((await nFT.lastPackageid()).toString())
+    console.log("lastPackageid",(await nFT.lastPackageid()).toString())
 
     console.log("URI" , (await nFT.tokenURI(1)))
     console.log("URI" , (await nFT.tokenURI(2)))
@@ -91,10 +96,6 @@ describe("Origen",  function ()  {
     await nFT.createToken(1);
 
     console.log("URI" , (await nFT.tokenURI(6)))
-
-
-
-
    
   });
  
