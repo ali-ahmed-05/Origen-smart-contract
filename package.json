@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "local": "npx hardhat run scripts/maindeploy.js --network localhost",
     "rinkeby": "npx hardhat run scripts/maindeploy.js --network rinkeby",
-    "goerli": "npx hardhat run scripts/maindeploy.js --network goerli"
+    "goerli": "npx hardhat run scripts/maindeploy.js --network goerli",
+    "arbGoerli": "npx hardhat run scripts/maindeploy.js --network arbGoerli"
   },
   "author": "",
   "license": "ISC",

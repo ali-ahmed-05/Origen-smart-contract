@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "5898cdeb-bf02-4ae3-8cba-65aa09a24e0d",
+		"name": "explorer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20356706"
+	},
+	"item": [
+		{
+			"name": "latest_blockNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_blockNumber",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_blockNumber"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific_getBlockByNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_getBlockByNumber&tag=0x10d4f&boolean=true",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_getBlockByNumber"
+						},
+						{
+							"key": "tag",
+							"value": "0x10d4f"
+						},
+						{
+							"key": "boolean",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlockTransactionCountByNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_getBlockTransactionCountByNumber&tag=0x10FB78",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_getBlockTransactionCountByNumber"
+						},
+						{
+							"key": "tag",
+							"value": "0x10FB78"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionByHash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_getTransactionByHash&txhash=0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_getTransactionByHash"
+						},
+						{
+							"key": "txhash",
+							"value": "0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionByBlockNumberAndIndex",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_getTransactionByBlockNumberAndIndex&tag=0xC6331D&index=0x11A",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_getTransactionByBlockNumberAndIndex"
+						},
+						{
+							"key": "tag",
+							"value": "0xC6331D"
+						},
+						{
+							"key": "index",
+							"value": "0x11A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_getTransactionCount&address=0x4bd5900Cb274ef15b153066D736bf3e83A9ba44e&tag=latest",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_getTransactionCount"
+						},
+						{
+							"key": "address",
+							"value": "0x4bd5900Cb274ef15b153066D736bf3e83A9ba44e"
+						},
+						{
+							"key": "tag",
+							"value": "latest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionReceipt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_getTransactionReceipt&txhash=0xadb8aec59e80db99811ac4a0235efa3e45da32928bcff557998552250fa672eb",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_getTransactionReceipt"
+						},
+						{
+							"key": "txhash",
+							"value": "0xadb8aec59e80db99811ac4a0235efa3e45da32928bcff557998552250fa672eb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gasPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_gasPrice",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_gasPrice"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estimateGas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=proxy&action=eth_estimateGas&data=0x4e71d92d&to=0xf0160428a8552ac9bb7e050d90eeade4ddd52843value=0xff22&gasPrice=0x51da038cc&gas=0x5f5e0ff",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "proxy"
+						},
+						{
+							"key": "action",
+							"value": "eth_estimateGas"
+						},
+						{
+							"key": "data",
+							"value": "0x4e71d92d"
+						},
+						{
+							"key": "to",
+							"value": "0xf0160428a8552ac9bb7e050d90eeade4ddd52843value=0xff22"
+						},
+						{
+							"key": "gasPrice",
+							"value": "0x51da038cc"
+						},
+						{
+							"key": "gas",
+							"value": "0x5f5e0ff"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_of_an_address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=account&action=txlist&address=0x0000000000000000000000000000000000001004&startblock=1&endblock=99999999&sort=asc&apikey=YourApiKeyToken",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "account"
+						},
+						{
+							"key": "action",
+							"value": "txlist"
+						},
+						{
+							"key": "address",
+							"value": "0x0000000000000000000000000000000000001004"
+						},
+						{
+							"key": "startblock",
+							"value": "1"
+						},
+						{
+							"key": "endblock",
+							"value": "99999999"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						},
+						{
+							"key": "apikey",
+							"value": "YourApiKeyToken"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_of_an_OrigenNFT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=account&action=txlist&address=0x0000000000000000000000000000000000001004&startblock=1&endblock=99999999&sort=asc&apikey=YourApiKeyToken",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "account"
+						},
+						{
+							"key": "action",
+							"value": "txlist"
+						},
+						{
+							"key": "address",
+							"value": "0x0000000000000000000000000000000000001004"
+						},
+						{
+							"key": "startblock",
+							"value": "1"
+						},
+						{
+							"key": "endblock",
+							"value": "99999999"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						},
+						{
+							"key": "apikey",
+							"value": "YourApiKeyToken"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_of_an_GCoin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api?module=account&action=txlist&address=0x0000000000000000000000000000000000001004&startblock=1&endblock=99999999&sort=asc&apikey=YourApiKeyToken",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "account"
+						},
+						{
+							"key": "action",
+							"value": "txlist"
+						},
+						{
+							"key": "address",
+							"value": "0x0000000000000000000000000000000000001004"
+						},
+						{
+							"key": "startblock",
+							"value": "1"
+						},
+						{
+							"key": "endblock",
+							"value": "99999999"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						},
+						{
+							"key": "apikey",
+							"value": "YourApiKeyToken"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apikey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "apikey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api-goerli.arbiscan.io"
+		},
+		{
+			"key": "apikey",
+			"value": "H3IBX19RDB8QN6Y55YVNIVXJE59RW9SAAJ"
+		}
+	]
+}

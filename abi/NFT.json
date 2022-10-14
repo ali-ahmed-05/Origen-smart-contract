@@ -10,7 +10,7 @@
   "function approve(address,uint256)",
   "function balanceOf(address) view returns (uint256)",
   "function baseURI() view returns (string)",
-  "function createPackage(string,uint256) payable returns (uint256)",
+  "function createPackage(string,uint256) returns (uint256)",
   "function createToken(uint256) payable returns (uint256)",
   "function createTokenURI(uint256) view returns (string)",
   "function disablePackage(uint256)",

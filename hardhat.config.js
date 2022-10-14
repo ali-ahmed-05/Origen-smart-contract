@@ -56,6 +56,10 @@ module.exports = {
       url: `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API}`,
       accounts: [`0x${process.env.privateKey}`],
     },
+    arbGoerli: {
+      url: `https://arb-goerli.g.alchemy.com/v2/abCvxhSsBKdBEjVfC4gkLtHY-iwR_6AJ`,
+      accounts: [`0x${process.env.privateKey}`],
+    },
   },
   abiExporter: {
     path: './abi',

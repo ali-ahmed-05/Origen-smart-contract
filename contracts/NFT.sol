@@ -64,7 +64,7 @@ contract NFT is ERC721Enumerable , Ownable {
         package[ID]._isActive = false;
     }
 
-    function createPackage(string memory packageURI , uint256 _price) onlyOwner public payable returns (uint) {
+    function createPackage(string memory packageURI , uint256 _price) onlyOwner external returns (uint) {
         _packageIds.increment();
         uint256 _id = _packageIds.current();
         setPackageURI(_id,packageURI);
@@ -78,7 +78,7 @@ contract NFT is ERC721Enumerable , Ownable {
         return _packageIds.current();
     }
 
-    function createToken(uint256 ID) mint_mod(ID , true) public payable returns (uint) {
+    function createToken(uint256 ID) mint_mod(ID , true) external payable returns (uint) {
         IERC20(token).transferFrom(_msgSender() , address(this) , package[ID].price);
         uint256 _id = getTokenId();
         _mint(_msgSender(), _id);
@@ -87,7 +87,7 @@ contract NFT is ERC721Enumerable , Ownable {
         return _id;
     }
 
-    function airDrop(uint256 ID , address account) mint_mod(ID , true) public onlyOwner returns (uint) {
+    function airDrop(uint256 ID , address account) mint_mod(ID , true) external onlyOwner returns (uint) {
         uint256 _id = getTokenId();
         _mint(account, _id);
         setTokenURI(_id,createTokenURI(_id));
@@ -103,6 +103,7 @@ contract NFT is ERC721Enumerable , Ownable {
     function setPackageURI(uint256 packageId, string memory packageURI) internal virtual {
         package[packageId].URI = packageURI; 
     }
+    
     function setPackagePrice(uint256 packageId , uint256 _price) internal virtual {
         package[packageId].price = _price; 
     }
